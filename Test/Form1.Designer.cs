@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.image_AE1 = new bryful_due.Image_AE();
 			this.dropdownlist_AE1 = new bryful_due.Dropdownlist_AE();
 			this.checkbox_AE1 = new bryful_due.Checkbox_AE();

@@ -10,6 +10,10 @@ Visual studio 2017 C#
 
 # Setup
 
+ˆÈ‰º‚ÌURL‚ğQÆ
+
+http://bit.ly/2maoCew
+
 # License
 
 This software is released under the MIT License, see LICENSE
