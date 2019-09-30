@@ -1,0 +1,114 @@
+﻿お久しぶりの更新です。
+
+ホントはずっと暖めていたスクリプトをうｐする予定だったのですが、
+もうちょい時間が掛かりそうなので今回はちょっとしたものを。
+
+
+//scriptUI graphics 用ファンクション****************************************************
+//backgroundColor(0～255)
+function UI_bgColor255(uiObj, uiColor)
+{
+    var gColor = new Array();
+    for(var i=0;i<3;i++){
+        gColor[i] = 1/255*Math.round(uiColor[i]);
+        //alert(gColor[i]);
+    }
+    var gUI = uiObj.graphics;
+    var uiBrush = gUI.newBrush(gUI.BrushType.SOLID_COLOR, [gColor[0], gColor[1], gColor[2], 1]);
+    gUI.backgroundColor = uiBrush;
+},
+
+//foregroundColor(0～255)
+function UI_fgColor255(uiObj, uiColor)
+{
+    var gColor = new Array();
+    for(var i=0;i<3;i++){
+        gColor[i] = 1/255*Math.round(uiColor[i]);
+        //alert(gColor[i]);
+    }
+    var gUI = uiObj.graphics;
+    var uiPen = gUI.newPen(gUI.PenType.SOLID_COLOR, [gColor[0], gColor[1], gColor[2], 1], 1);
+    gUI.foregroundColor = uiPen;
+},
+
+//backgroundColor(0～1)
+function UI_bgColor(uiObj, uiColor)
+{
+    var gColor = new Array();
+    gColor = uiColor;
+    var gUI = uiObj.graphics;
+    var uiBrush = gUI.newBrush(gUI.BrushType.SOLID_COLOR, [gColor[0], gColor[1], gColor[2], 1]);
+    gUI.backgroundColor = uiBrush;
+},
+
+//foregroundColor(0～1)
+function  UI_fgColor(uiObj, uiColor)
+{
+    var gColor = new Array();
+    gColor = uiColor;
+    var gUI = uiObj.graphics;
+    var uiPen = gUI.newPen(gUI.PenType.SOLID_COLOR, [gColor[0], gColor[1], gColor[2], 1], 1);
+    gUI.foregroundColor = uiPen;
+},
+
+//font
+function UI_font(uiObj, uiFont, uiFontStyle, uiFontSize)
+{
+    var fontStyle = eval("ScriptUI.FontStyle." + uiFontStyle);
+    var gFont = ScriptUI.newFont (uiFont, fontStyle, uiFontSize);
+    uiObj.graphics.font = gFont;
+}
+
+
+これはscriptUI Graphics で色やフォントを変更するためのファンクションです。
+作成したpalette,panel,group,edittext,statictext などなどに使えます。
+
+UI_bgColor255 は背景色をRGB[255,255,255]で指定します。(0～255)
+UI_fgColor255 は表示色をRGB[255,255,255]で指定します。(0～255)
+UI_bgColor は背景色をRGB[1,1,1]で指定します。(0～1)
+UI_ｆgColor は表示色をRGB[1,1,1]で指定します。(0～1)
+UI_font はフォントとそのサイズを指定します。
+
+
+使い方はこのファンクションをコピペして、
+//例：グループに対して
+grpObj = Obj.add("group", [0, 0, 100, 100]);
+UI_bgColor255( grpObj, [ 100, 50, 50] );
+
+//例：エディットテキストに対して
+edTxt = Obj.add("edittext", [0, 0, 100, 100], "", {multiline: true});
+UI_font( edTxt, , "Impact", "REGULAR", 30 );
+
+てな感じです。
+
+
+以前はチマチマ一通り書いてたのですが、こういう風にするとスッキリして楽チンです。
+ボタンに適用するにはもう一工夫が必要なのですが、それはまたの機会にでも。
+
+次の更新にはいいものをUPできるようにしたいですねー
+
+function $windiwName()
+{
+	//---------------
+	$var$this$winObjName = new Window("$windowType", "$windowTitle", $windowBounds $windowOption);
+
+$build
+
+	//---------------
+	this.show = function()
+	{
+		$this$winObjName.center(); 
+		return $this$winObjName.show();
+	}
+}
+var dlg = new $windiwName;
+dlg.show();
+
+
+//---------------
+var $winObjName = new Window("$windowType", "$windowTitle", $windowBounds $windowOption);
+
+$build
+
+$winObjName.center(); 
+$winObjName.show();
