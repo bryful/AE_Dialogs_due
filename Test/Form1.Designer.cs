@@ -41,13 +41,14 @@
 			this.button_AE2 = new bryful_due.Button_AE();
 			this.button_AE1 = new bryful_due.Button_AE();
 			this.ae_window1 = new bryful_due.Ae_window();
+			this.edittext_AE1 = new bryful_due.Edittext_AE();
 			((System.ComponentModel.ISupportInitialize)(this.image_AE1)).BeginInit();
 			this.panel_AE1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// image_AE1
 			// 
-			this.image_AE1.AE_bounds = new System.Drawing.Rectangle(288, 62, 125, 130);
+			this.image_AE1.AE_bounds = new System.Drawing.Rectangle(288, 62, 104, 89);
 			this.image_AE1.AE_defaultExt = ".png";
 			this.image_AE1.AE_imageFileName = "image_AE1_img.png";
 			this.image_AE1.AE_imageFilePath = "./";
@@ -59,7 +60,7 @@
 			this.image_AE1.Image = global::Test.Properties.Resources.適当な画像ファイル;
 			this.image_AE1.Location = new System.Drawing.Point(288, 62);
 			this.image_AE1.Name = "image_AE1";
-			this.image_AE1.Size = new System.Drawing.Size(125, 130);
+			this.image_AE1.Size = new System.Drawing.Size(104, 89);
 			this.image_AE1.TabIndex = 10;
 			this.image_AE1.TabStop = false;
 			// 
@@ -124,6 +125,7 @@
 			this.panel_AE2.AE_objName = "panel_AE2";
 			this.panel_AE2.AE_text = "panel_AE2";
 			this.panel_AE2.AE_textObjName = "";
+			this.panel_AE2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.panel_AE2.Font = new System.Drawing.Font("Tahoma", 8.25F);
 			this.panel_AE2.Location = new System.Drawing.Point(152, 185);
 			this.panel_AE2.Name = "panel_AE2";
@@ -202,7 +204,7 @@
 			// 
 			// button_AE2
 			// 
-			this.button_AE2.AE_bounds = new System.Drawing.Rectangle(13, 62, 170, 59);
+			this.button_AE2.AE_bounds = new System.Drawing.Rectangle(13, 62, 178, 59);
 			this.button_AE2.AE_defaultElement = bryful_due.defaultElement.none;
 			this.button_AE2.AE_isLocal = true;
 			this.button_AE2.AE_objName = "button_AE2";
@@ -211,14 +213,14 @@
 			this.button_AE2.Font = new System.Drawing.Font("Impact", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.button_AE2.Location = new System.Drawing.Point(13, 62);
 			this.button_AE2.Name = "button_AE2";
-			this.button_AE2.Size = new System.Drawing.Size(170, 59);
+			this.button_AE2.Size = new System.Drawing.Size(178, 59);
 			this.button_AE2.TabIndex = 1;
 			this.button_AE2.Text = "button_AE2";
 			this.button_AE2.UseVisualStyleBackColor = true;
 			// 
 			// button_AE1
 			// 
-			this.button_AE1.AE_bounds = new System.Drawing.Rectangle(13, 12, 124, 33);
+			this.button_AE1.AE_bounds = new System.Drawing.Rectangle(13, 12, 140, 29);
 			this.button_AE1.AE_defaultElement = bryful_due.defaultElement.none;
 			this.button_AE1.AE_isLocal = true;
 			this.button_AE1.AE_objName = "button_AE1";
@@ -227,7 +229,7 @@
 			this.button_AE1.Font = new System.Drawing.Font("Tahoma", 8.25F);
 			this.button_AE1.Location = new System.Drawing.Point(13, 12);
 			this.button_AE1.Name = "button_AE1";
-			this.button_AE1.Size = new System.Drawing.Size(124, 33);
+			this.button_AE1.Size = new System.Drawing.Size(140, 29);
 			this.button_AE1.TabIndex = 0;
 			this.button_AE1.Text = "button_AE1";
 			this.button_AE1.UseVisualStyleBackColor = true;
@@ -248,12 +250,32 @@
 			this.ae_window1.AE_title = "MyDialog";
 			this.ae_window1.AE_windowType = bryful_due.windowType.floatingPalette;
 			// 
+			// edittext_AE1
+			// 
+			this.edittext_AE1.AE_borderless = false;
+			this.edittext_AE1.AE_bounds = new System.Drawing.Rectangle(284, 157, 125, 148);
+			this.edittext_AE1.AE_isLocal = false;
+			this.edittext_AE1.AE_multiline = true;
+			this.edittext_AE1.AE_noecho = false;
+			this.edittext_AE1.AE_objName = "edittext_AE1";
+			this.edittext_AE1.AE_readonly = false;
+			this.edittext_AE1.AE_scrollable = false;
+			this.edittext_AE1.AE_text = new string[0];
+			this.edittext_AE1.AE_textObjName = "";
+			this.edittext_AE1.Font = new System.Drawing.Font("Tahoma", 8.25F);
+			this.edittext_AE1.Location = new System.Drawing.Point(284, 157);
+			this.edittext_AE1.Multiline = true;
+			this.edittext_AE1.Name = "edittext_AE1";
+			this.edittext_AE1.Size = new System.Drawing.Size(125, 148);
+			this.edittext_AE1.TabIndex = 11;
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Control;
 			this.ClientSize = new System.Drawing.Size(425, 320);
+			this.Controls.Add(this.edittext_AE1);
 			this.Controls.Add(this.image_AE1);
 			this.Controls.Add(this.dropdownlist_AE1);
 			this.Controls.Add(this.checkbox_AE1);
@@ -275,6 +297,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.image_AE1)).EndInit();
 			this.panel_AE1.ResumeLayout(false);
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -292,7 +315,7 @@
 		private bryful_due.Checkbox_AE checkbox_AE1;
 		private bryful_due.Dropdownlist_AE dropdownlist_AE1;
 		private bryful_due.Image_AE image_AE1;
-
+		private bryful_due.Edittext_AE edittext_AE1;
 	}
 }
 
