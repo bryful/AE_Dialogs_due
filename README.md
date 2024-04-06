@@ -1,17 +1,16 @@
 # AE_Dialogs_mk
-After Effects�̃X�N���v�g��UI�f�U�C����C#�̃f�U�C�i�[�ł��Ă��܂����Ƃ�������<br>
-.Net8�ɏグ�܂����B
-
+After EffectsのスクリプトでUIデザインをC#のデザイナーでしてしまおうというもの<br>
+.Net8に上げました。<br>
+<br>
+dll形式が面倒になったので普通のプロジェクトにしました。<br>
+テンプレート化して使用してください。
 
 # Dependency
 Visual studio 2022 C#
 
 
 # Setup
-
-�ȉ���URL���Q��
-
-http://bit.ly/2maoCew
+これを開きプロジェクトをテンプレート化。その後新規プロジェクトでそのテンプレートを使用。<be>
 
 # License
 
