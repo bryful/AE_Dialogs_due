@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AE_Dialog_Mk", "AE_Dialog_Mk\AE_Dialog_Mk.csproj", "{5CFACE00-794A-4DFF-B07B-94ECBC1F6A80}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CFACE00-794A-4DFF-B07B-94ECBC1F6A80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CFACE00-794A-4DFF-B07B-94ECBC1F6A80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CFACE00-794A-4DFF-B07B-94ECBC1F6A80}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{5CFACE00-794A-4DFF-B07B-94ECBC1F6A80}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{5CFACE00-794A-4DFF-B07B-94ECBC1F6A80}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5CFACE00-794A-4DFF-B07B-94ECBC1F6A80}.Debug|x86.Build.0 = Debug|Any CPU
+		{5CFACE00-794A-4DFF-B07B-94ECBC1F6A80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CFACE00-794A-4DFF-B07B-94ECBC1F6A80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CFACE00-794A-4DFF-B07B-94ECBC1F6A80}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{5CFACE00-794A-4DFF-B07B-94ECBC1F6A80}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{5CFACE00-794A-4DFF-B07B-94ECBC1F6A80}.Release|x86.ActiveCfg = Release|Any CPU
+		{5CFACE00-794A-4DFF-B07B-94ECBC1F6A80}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {66E557C2-7F39-45E9-85AA-42B105ACC957}
+	EndGlobalSection
+EndGlobal

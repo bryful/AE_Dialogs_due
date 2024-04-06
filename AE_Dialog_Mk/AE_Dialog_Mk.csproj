@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="_pool\Iconbutton_AE.cs" />
+    <Compile Remove="_pool\Image_AE.cs" />
+    <Compile Remove="_pool\Progressbar_AE.cs" />
+    <Compile Remove="_pool\ScrollbarH_AE.cs" />
+    <Compile Remove="_pool\ScrollbarV_AE.cs" />
+    <Compile Remove="_pool\Slider_AE.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="_pool\Iconbutton_AE.cs" />
+    <None Include="_pool\Image_AE.cs" />
+    <None Include="_pool\Progressbar_AE.cs" />
+    <None Include="_pool\ScrollbarH_AE.cs" />
+    <None Include="_pool\ScrollbarV_AE.cs" />
+    <None Include="_pool\Slider_AE.cs" />
+  </ItemGroup>
+
+</Project>
