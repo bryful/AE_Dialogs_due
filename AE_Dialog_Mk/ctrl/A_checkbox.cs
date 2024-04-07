@@ -68,7 +68,7 @@ namespace AE_Dialog_Mk
 			{
 				string ret = $"var {AE_objName} = {Utils.GetWinObjName(this)}.add(\"checkbox\",";
 				ret += $" {BoundStr}, \"{AE_text}\");\r\n";
-				ret += $"{AE_objName}.value = {AE_value};\r\n";
+				ret += $"{AE_objName}.value = {AE_value.ToString().ToLower()};\r\n";
 				return ret;
 			}
 		}

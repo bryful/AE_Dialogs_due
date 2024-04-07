@@ -48,7 +48,7 @@
 			btnOK.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
 			btnOK.DialogResult = DialogResult.OK;
 			btnOK.Location = new Point(967, 682);
-			btnOK.Margin = new Padding(4, 4, 4, 4);
+			btnOK.Margin = new Padding(4);
 			btnOK.Name = "btnOK";
 			btnOK.Size = new Size(88, 29);
 			btnOK.TabIndex = 1;
@@ -128,9 +128,9 @@
 			// 
 			textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 			textBox1.BackColor = SystemColors.Window;
-			textBox1.Font = new Font("源ノ角ゴシック Code JP R", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 128);
+			textBox1.Font = new Font("源ノ角ゴシック Code JP R", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 128);
 			textBox1.Location = new Point(0, 34);
-			textBox1.Margin = new Padding(4, 4, 4, 4);
+			textBox1.Margin = new Padding(4);
 			textBox1.Multiline = true;
 			textBox1.Name = "textBox1";
 			textBox1.ReadOnly = true;
@@ -149,7 +149,7 @@
 			Controls.Add(btnOK);
 			Controls.Add(menuStrip1);
 			MainMenuStrip = menuStrip1;
-			Margin = new Padding(4, 4, 4, 4);
+			Margin = new Padding(4);
 			MaximizeBox = false;
 			MinimizeBox = false;
 			Name = "CodeDisp";

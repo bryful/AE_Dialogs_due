@@ -15,6 +15,7 @@ namespace AE_Dialog_Mk
 		//------------------------------------------------------------------------------------------------------------
 		public A_edittext()
 		{
+			base.AutoSize = false;
 			this.Font = new Font("Tahoma", 8.25f);
 
 		}
@@ -182,7 +183,7 @@ namespace AE_Dialog_Mk
 				}
 				if (op != "") op = ",{" + op + "}";
 				
-				string ret = $"var {AE_objName} = {Utils.GetWinObjName(this)}.add(\"edittext\", {BoundStr}, \"{AE_text}\" op);\r\n";
+				string ret = $"var {AE_objName} = {Utils.GetWinObjName(this)}.add(\"edittext\", {BoundStr}, \"{AE_text}\" {op});\r\n";
 
 				return ret;
 			}
@@ -295,7 +296,7 @@ namespace AE_Dialog_Mk
 		public new System.Boolean AutoSize
 		{
 			get { return base.AutoSize; }
-			set { ; }
+			set { base.AutoSize = false; }
 		}
 		// **************************************************************
 		

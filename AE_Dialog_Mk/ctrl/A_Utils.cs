@@ -49,7 +49,7 @@ namespace AE_Dialog_Mk
 		public static string RectToBounds(Rectangle rct)
 		{
 			string ret = "";
-			ret = $"[{rct.Left},{rct.Top},{rct.Left} + {rct.Width},{rct.Top} + {rct.Height}";
+			ret = $"[{rct.Left},{rct.Top},{rct.Left}+{rct.Width},{rct.Top}+{rct.Height}]";
 			return ret;
 		}
 		//------------------------------------------------------------------------------------------------------------
@@ -156,8 +156,9 @@ namespace AE_Dialog_Mk
 			string ret = "";
 			if (ctrl.Controls.Count > 0)
 			{
-				foreach (Control c in ctrl.Controls)
+				for(int i= ctrl.Controls.Count-1; i>=0; i--)
 				{
+					Control c = ctrl.Controls[i];
 					string ss = "";
 					if (c is A_button) { ss = ((A_button)c).ScriptCode; }
 					else if (c is A_checkbox) { ss = ((A_checkbox)c).ScriptCode; }

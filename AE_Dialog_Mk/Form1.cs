@@ -6,7 +6,8 @@ namespace AE_Dialog_Mk
 		public Form1()
 		{
 			InitializeComponent();
-			
+
+			Clipboard.SetText(GetScriptCode());
 
 		}
 

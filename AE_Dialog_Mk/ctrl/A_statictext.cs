@@ -97,7 +97,7 @@ namespace AE_Dialog_Mk
 					}
 				}
 				if (op != "") op = ",{" + op + "}";
-				string ret = $"var {AE_objName} = {Utils.GetWinObjName(this)}.add(\"statictext\", {AE_text},{BoundStr} {op});\r\n";
+				string ret = $"var {AE_objName} = {Utils.GetWinObjName(this)}.add(\"statictext\",{BoundStr}, \"{AE_text}\" {op});\r\n";
 
 				return ret;
 			}

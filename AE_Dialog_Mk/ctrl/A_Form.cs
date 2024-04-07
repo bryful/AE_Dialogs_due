@@ -20,8 +20,10 @@ namespace AE_Dialog_Mk
 		private bool _center = true;
 
 		public const string objNameDef = "winObj";
-		private string _objName = objNameDef; public A_Form()
+		private string _objName = objNameDef; 
+		public A_Form()
 		{
+			base.AutoSize = false;
 			InitializeComponent();
 			//メニューを追加
 			showCodeMenu.Text = "ダイアログに表示";
@@ -43,7 +45,7 @@ namespace AE_Dialog_Mk
 		}
 
 		//------------------------------------------------------------------------------------------------------------
-		private string GetScriptCode()
+		public string GetScriptCode()
 		{
 			string ret = "";
 
@@ -92,7 +94,7 @@ namespace AE_Dialog_Mk
 			ret = $"(function(){{\r\n";
 			if (_windowType == windowType.floatingPalette)
 			{
-				ret += $"\tvar {AE_objName} = ( me instanceof Panel) ? me : new Window(\"palette\", \"{AE_title}\", {Utils.GetBoundStr(this)}  ,resizeable:true);\r\n";
+				ret += $"\tvar {AE_objName} = ( me instanceof Panel) ? me : new Window(\"palette\", \"{AE_title}\", {Utils.GetBoundStr(this)}  ,{{resizeable:true}});\r\n";
 
 			}
 			else
@@ -102,7 +104,7 @@ namespace AE_Dialog_Mk
 			ret += $"\t{lines}\r\n";
 			if (_windowType == windowType.floatingPalette)
 			{
-				ret += $"\tif ({AE_objName} instanceof Window ) {{\r\n";
+				ret += $"\tif ({AE_objName} instanceof Panel ) {{\r\n";
 				ret += $"\t\t{AE_objName}.center();\r\n";
 				ret += $"\t\t{AE_objName}.show();\r\n";
 				ret += "\t}\r\n";
@@ -516,12 +518,6 @@ namespace AE_Dialog_Mk
 			set { base.ShowIcon = value; }
 		}
 		// **************************************************************
-		[Browsable(false)]
-		public new System.Drawing.Size Size
-		{
-			get { return base.Size; }
-			set { base.Size = value; }
-		}
 		// **************************************************************
 		[Browsable(false)]
 		public new System.Windows.Forms.SizeGripStyle SizeGripStyle
