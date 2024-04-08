@@ -77,6 +77,10 @@ namespace AE_Dialog_Mk
 		public static string GetBoundStr(Control sender)
 		{
 			Rectangle b = sender.Bounds;
+			if(sender is Form)
+			{
+				b = sender.ClientRectangle;
+			}
 			/*
 			if ((sender.Parent is Panel_AE) || (sender.Parent is Group_AE) || (sender.Parent is GroupBox) || (sender.Parent is Panel))
 			{
