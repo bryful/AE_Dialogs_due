@@ -44,6 +44,7 @@
 			a_button1 = new A_button();
 			a_button2 = new A_button();
 			a_button3 = new A_button();
+			a_panel1 = new A_panel();
 			SuspendLayout();
 			// 
 			// a_statictext1
@@ -428,18 +429,40 @@
 			a_button3.Text = "Close";
 			a_button3.UseVisualStyleBackColor = true;
 			// 
+			// a_panel1
+			// 
+			a_panel1.AE_borderStyle = borderStyle.etched;
+			a_panel1.AE_bounds = new int[]
+	{
+	26,
+	153,
+	267,
+	205
+	};
+			a_panel1.AE_objName = "a_panel1";
+			a_panel1.AE_text = "";
+			a_panel1.AE_textItemName = "a_panel1_item";
+			a_panel1.DataContext = null;
+			a_panel1.Font = new Font("Tahoma", 8.25F);
+			a_panel1.Location = new Point(26, 153);
+			a_panel1.Name = "a_panel1";
+			a_panel1.Size = new Size(241, 52);
+			a_panel1.TabIndex = 16;
+			a_panel1.TabStop = false;
+			// 
 			// Form1
 			// 
 			AE_bounds = new int[]
 	{
 	15,
 	15,
-	347,
-	202
+	361,
+	288
 	};
 			AE_title = "アートボードで回転";
 			AutoScaleMode = AutoScaleMode.None;
-			ClientSize = new Size(316, 148);
+			ClientSize = new Size(330, 234);
+			Controls.Add(a_panel1);
 			Controls.Add(a_button3);
 			Controls.Add(a_button2);
 			Controls.Add(a_button1);
@@ -480,5 +503,6 @@
 		private A_button a_button1;
 		private A_button a_button2;
 		private A_button a_button3;
+		private A_panel a_panel1;
 	}
 }

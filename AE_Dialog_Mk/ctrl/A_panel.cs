@@ -24,6 +24,7 @@ namespace AE_Dialog_Mk
 
 		}
 		//------------------------------------------------------------------------------------------------------------
+		[Category("AE")]
 		public string AE_objName
 		{
 			get
@@ -35,6 +36,7 @@ namespace AE_Dialog_Mk
 			set { _objName = value.Trim(); }
 		}
 		//------------------------------------------------------------------------------------------------------------
+		[Category("AE")]
 		public string AE_textItemName
 		{
 			get
@@ -49,24 +51,28 @@ namespace AE_Dialog_Mk
 		}
 		//------------------------------------------------------------------------------------------------------------
 		//------------------------------------------------------------------------------------------------------------
+		[Category("AE")]
 		public string AE_text
 		{
 			get { return this.Text; }
 			set { this.Text = value; }
 		}
 		//------------------------------------------------------------------------------------------------------------
+		[Category("AE")]
 		public borderStyle AE_borderStyle
 		{
 			get { return _borderStyle; }
 			set { _borderStyle = value; this.Invalidate(); }
 		}
 		//------------------------------------------------------------------------------------------------------------
+		[Category("AE")]
 		public int[] AE_bounds
 		{
 			get { return Utils.ToBounds(this); }
 			set { Utils.FromBounds(value, this); }
 		}
 		//------------------------------------------------------------------------------------------------------------
+		[Category("AE")]
 		public string BoundStr
 		{
 			get { return Utils.GetBoundStr(this); }

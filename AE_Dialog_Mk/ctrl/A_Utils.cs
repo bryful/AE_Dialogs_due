@@ -152,7 +152,11 @@ namespace AE_Dialog_Mk
 				{
 					ret = ((A_group)f).AE_objName;
 				}
-			}
+				else if (f is A_panel)
+				{
+					ret = ((A_panel)f).AE_objName;
+				}
+		}
 			return ret;
 		}
 		private static int FindTabIndex(Control ctrl,int tidx)
@@ -174,11 +178,9 @@ namespace AE_Dialog_Mk
 			string ret = "";
 			if (ctrl.Controls.Count > 0)
 			{
-				for(int i= 0; i< ctrl.Controls.Count; i++)
+				for(int i= ctrl.Controls.Count-1; i>=0 ; i--)
 				{
-					int idx = FindTabIndex(ctrl, i);
-					if (idx < 0) continue;
-					Control c = ctrl.Controls[idx];
+					Control c = ctrl.Controls[i];
 					string ss = "";
 					if (c is A_button) { ss = ((A_button)c).ScriptCode; }
 					else if (c is A_checkbox) { ss = ((A_checkbox)c).ScriptCode; }

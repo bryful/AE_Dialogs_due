@@ -68,7 +68,7 @@ namespace AE_Dialog_Mk
 			get
 			{
 				string ret = $"var {AE_objName} = {Utils.GetWinObjName(this)}.add(\"radiobutton\", {BoundStr}, \"{AE_text}\");\r\n";
-				ret += $"{AE_objName}.value = {AE_value.ToString().ToLower()};\r\n";
+				if (AE_value) ret += $"{AE_objName}.value = {AE_value.ToString().ToLower()};\r\n";
 				if (Enabled == false) ret += $"{AE_objName}.enabled = false;\r\n";
 
 				return ret;
