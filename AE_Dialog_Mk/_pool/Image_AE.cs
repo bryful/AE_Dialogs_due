@@ -248,6 +248,7 @@ namespace BRY
 			get { return base.SizeMode; }
 			set { base.SizeMode = value; }
 		}
+
 		[Browsable(false)]
 		public new System.Boolean TabStop
 		{

@@ -151,14 +151,30 @@ namespace AE_Dialog_Mk
 			}
 			return ret;
 		}
+		private static int FindTabIndex(Control ctrl,int tidx)
+		{
+			int ret = -1;
+			if ((tidx<0)||(tidx>=ctrl.Controls.Count)) return ret;
+			for (int i = 0; i < ctrl.Controls.Count; i++)
+			{
+				if (ctrl.Controls[i].TabIndex == tidx)
+				{
+					ret = i; 
+					break;
+				}
+			}
+			return ret;
+		}
 		public static string GetControlsScriptCode(Control ctrl)
 		{
 			string ret = "";
 			if (ctrl.Controls.Count > 0)
 			{
-				for(int i= ctrl.Controls.Count-1; i>=0; i--)
+				for(int i= 0; i< ctrl.Controls.Count; i++)
 				{
-					Control c = ctrl.Controls[i];
+					int idx = FindTabIndex(ctrl, i);
+					if (idx < 0) continue;
+					Control c = ctrl.Controls[idx];
 					string ss = "";
 					if (c is A_button) { ss = ((A_button)c).ScriptCode; }
 					else if (c is A_checkbox) { ss = ((A_checkbox)c).ScriptCode; }

@@ -76,6 +76,8 @@ namespace AE_Dialog_Mk
 		{
 			string ret = "";
 			ret = $"var {AE_objName} = {Utils.GetWinObjName(this)}.add(\"panel\", {BoundStr});\r\n";
+			if (Enabled == false) ret += $"{AE_objName}.enabled = false;\r\n";
+
 			ret += Utils.GetControlsScriptCode(this);
 			return ret;
 		}
@@ -139,7 +141,7 @@ namespace AE_Dialog_Mk
 		}
 		// ***************************************************************************************
 		// ***************************************************************************************
-		#region
+		#region Prop
 		// **************************************************************
 		[Browsable(false)]
 		public new System.Boolean AllowDrop
@@ -310,12 +312,6 @@ namespace AE_Dialog_Mk
 			set { base.Dock = value; }
 		}
 		// **************************************************************
-		[Browsable(false)]
-		public new System.Boolean Enabled
-		{
-			get { return base.Enabled; }
-			set { base.Enabled = value; }
-		}
 		// **************************************************************
 		[Browsable(false)]
 		public new System.Drawing.Font Font
@@ -399,12 +395,14 @@ namespace AE_Dialog_Mk
 		}
 		// **************************************************************
 		// **************************************************************
+		/*
 		[Browsable(false)]
 		public new System.Int32 TabIndex
 		{
 			get { return base.TabIndex; }
 			set { base.TabIndex = value; }
 		}
+		*/
 		// **************************************************************
 		// **************************************************************
 		[Browsable(false)]

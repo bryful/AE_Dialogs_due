@@ -67,7 +67,7 @@ namespace AE_Dialog_Mk
 			string lines = Utils.GetControlsScriptCode(this);
 			if (lines != "")
 			{
-				lines = "\t" + lines.Replace("\r\n", "\r\n\t");
+				lines =  lines.Replace("\r\n", "\r\n\t");
 			}
 			string op = "";
 			if (AE_resizeable)
@@ -533,12 +533,14 @@ namespace AE_Dialog_Mk
 			set { base.StartPosition = value; }
 		}
 		// **************************************************************
+		/*
 		[Browsable(false)]
 		public new System.Int32 TabIndex
 		{
 			get { return base.TabIndex; }
 			set { base.TabIndex = value; }
 		}
+		*/
 		// **************************************************************
 		[Browsable(false)]
 		public new System.Boolean TabStop
@@ -743,12 +745,6 @@ namespace AE_Dialog_Mk
 			set { base.Dock = value; }
 		}
 		// **************************************************************
-		[Browsable(false)]
-		public new System.Boolean Enabled
-		{
-			get { return base.Enabled; }
-			set { base.Enabled = value; }
-		}
 		// **************************************************************
 		[Browsable(false)]
 		public new System.Drawing.Font Font

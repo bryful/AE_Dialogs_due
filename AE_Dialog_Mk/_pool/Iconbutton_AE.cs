@@ -446,12 +446,14 @@ namespace BRY
 			get { return base.TabIndex; }
 			set { base.TabIndex = value; }
 		}
+		/*
 		[Browsable(false)]
 		public new System.Boolean TabStop
 		{
 			get { return base.TabStop; }
 			set { base.TabStop = value; }
 		}
+		*/
 		[Browsable(false)]
 		public new System.Object Tag
 		{

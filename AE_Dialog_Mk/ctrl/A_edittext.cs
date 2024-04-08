@@ -184,6 +184,7 @@ namespace AE_Dialog_Mk
 				if (op != "") op = ",{" + op + "}";
 				
 				string ret = $"var {AE_objName} = {Utils.GetWinObjName(this)}.add(\"edittext\", {BoundStr}, \"{AE_text}\" {op});\r\n";
+				if (Enabled == false) ret += $"{AE_objName}.enabled = false;\r\n";
 
 				return ret;
 			}
@@ -192,7 +193,7 @@ namespace AE_Dialog_Mk
 		// ************************************************************************************
 		// ************************************************************************************
 		// ************************************************************************************
-		#region
+		#region Prop
 		// **************************************************************
 		[Browsable(false)]
 		public new System.Boolean AcceptsReturn
@@ -500,12 +501,7 @@ namespace AE_Dialog_Mk
 			set { base.Dock = value; }
 		}
 		// **************************************************************
-		[Browsable(false)]
-		public new System.Boolean Enabled
-		{
-			get { return base.Enabled; }
-			set { base.Enabled = value; }
-		}
+		
 		// **************************************************************
 		[Browsable(false)]
 		public new System.Drawing.Font Font
@@ -588,14 +584,16 @@ namespace AE_Dialog_Mk
 			set { base.Site = value; }
 		}
 		// **************************************************************
-		
+
 		// **************************************************************
+		/*
 		[Browsable(false)]
 		public new System.Int32 TabIndex
 		{
 			get { return base.TabIndex; }
 			set { base.TabIndex = value; }
 		}
+		*/
 		// **************************************************************
 		[Browsable(false)]
 		public new System.Boolean TabStop
@@ -604,7 +602,7 @@ namespace AE_Dialog_Mk
 			set { base.TabStop = value; }
 		}
 		// **************************************************************
-		
+
 		// **************************************************************
 		[Browsable(false)]
 		public new System.Int32 Top

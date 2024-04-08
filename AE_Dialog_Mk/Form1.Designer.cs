@@ -381,7 +381,7 @@
 			a_button1.Location = new Point(92, 98);
 			a_button1.Name = "a_button1";
 			a_button1.Size = new Size(130, 36);
-			a_button1.TabIndex = 13;
+			a_button1.TabIndex = 14;
 			a_button1.Text = "Apply";
 			a_button1.UseVisualStyleBackColor = true;
 			// 
@@ -397,12 +397,13 @@
 			a_button2.AE_objName = "btnUndo";
 			a_button2.AE_text = "Undo";
 			a_button2.DataContext = null;
+			a_button2.Enabled = false;
 			a_button2.Font = new Font("Tahoma", 8.25F);
 			a_button2.Image = null;
 			a_button2.Location = new Point(12, 98);
 			a_button2.Name = "a_button2";
 			a_button2.Size = new Size(74, 36);
-			a_button2.TabIndex = 14;
+			a_button2.TabIndex = 13;
 			a_button2.Text = "Undo";
 			a_button2.UseVisualStyleBackColor = true;
 			// 

@@ -7,7 +7,8 @@ namespace AE_Dialog_Mk
 		{
 			InitializeComponent();
 
-			Clipboard.SetText(GetScriptCode());
+			//Clipboard.SetText(GetScriptCode());
+			Clipboard.SetText(Utils.GetProps(typeof(ListBox)	));
 
 		}
 
