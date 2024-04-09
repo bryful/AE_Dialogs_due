@@ -178,9 +178,10 @@ namespace AE_Dialog_Mk
 			string ret = "";
 			if (ctrl.Controls.Count > 0)
 			{
-				for(int i= ctrl.Controls.Count-1; i>=0 ; i--)
+				for(int i= 0; i< ctrl.Controls.Count; i++)
 				{
-					Control c = ctrl.Controls[i];
+
+					Control c = ctrl.Controls[FindTabIndex(ctrl,i)];
 					string ss = "";
 					if (c is A_button) { ss = ((A_button)c).ScriptCode; }
 					else if (c is A_checkbox) { ss = ((A_checkbox)c).ScriptCode; }

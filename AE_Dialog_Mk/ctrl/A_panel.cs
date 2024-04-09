@@ -35,20 +35,7 @@ namespace AE_Dialog_Mk
 			}
 			set { _objName = value.Trim(); }
 		}
-		//------------------------------------------------------------------------------------------------------------
-		[Category("AE")]
-		public string AE_textItemName
-		{
-			get
-			{
-				if (_textItemName == string.Empty)
-				{
-					_textItemName = AE_objName + "_item";
-				}
-				return _textItemName;
-			}
-			set { _textItemName = value.Trim(); }
-		}
+		
 		//------------------------------------------------------------------------------------------------------------
 		//------------------------------------------------------------------------------------------------------------
 		[Category("AE")]
@@ -81,7 +68,7 @@ namespace AE_Dialog_Mk
 		public string GetScriptCode()
 		{
 			string ret = "";
-			ret = $"var {AE_objName} = {Utils.GetWinObjName(this)}.add(\"panel\", {BoundStr});\r\n";
+			ret = $"var {AE_objName} = {Utils.GetWinObjName(this)}.add(\"panel\", {BoundStr}, \"{AE_text}\");\r\n";
 			if (Enabled == false) ret += $"{AE_objName}.enabled = false;\r\n";
 
 			ret += Utils.GetControlsScriptCode(this);
